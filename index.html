@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1f8a3e">
+<title>Berbagi Indah - Portal WiFi</title>
+<style>
+body{margin:0;padding:0;background:#e0e0e0 url('bg-jaringan.jpg');background-size:cover;font-family:Arial;}
+header{background:#1f8a3e;padding:14px;color:#fff;font-size:20px;font-weight:bold;text-align:left;position:sticky;top:0;z-index:1000;display:flex;justify-content:space-between;align-items:center;}
+#jam{font-size:14px;color:#fff;margin-left:10px;}
+#menuBtn{position:fixed;top:12px;right:14px;font-size:30px;cursor:pointer;color:#fff;z-index:1001;}
+#side{position:fixed;top:0;right:-250px;width:250px;height:100%;background:#fff;transition:.4s;padding-top:60px;z-index:1002;}
+#side a,#side .backBtn{display:block;padding:14px;border-bottom:1px solid #ccc;text-decoration:none;color:#333;font-size:18px;cursor:pointer;}
+.backBtn{background:#1f8a3e;color:#fff;text-align:center;font-weight:bold;}
+.box{width:92%;margin:20px auto;background:#fff;padding:18px;border-radius:8px;}
+.btn{background:#1f8a3e;color:#fff;padding:12px;border:none;width:100%;border-radius:6px;margin-top:12px;font-size:17px;cursor:pointer;}
+#berbagi{background:#f1f1f1 url('bg-makanan.jpg');background-size:cover;background-position:center;padding-bottom:100px;}
+label{font-size:17px;}input,select{width:100%;padding:10px;margin-bottom:10px;}
+h2{color:#1f8a3e;text-align:center;}
+.note{font-size:15px;margin-top:14px;padding:10px;background:#e3ffe3;border-left:4px solid #1f8a3e;color:green;font-weight:bold;display:flex;align-items:center;justify-content:start;}
+.note img{width:24px;height:24px;margin-right:8px;}
+.note-blue{background:#e3f0ff;border-left:4px solid #007bff;color:#007bff;}
+.footer-note{font-size:14px;text-align:center;padding:10px;background:#f5f5f5;}
+.apk-btn{display:inline-block;margin-top:20px;padding:14px 28px;font-size:18px;background:#ff6600;color:white;border-radius:8px;text-decoration:none;cursor:pointer;}
+.pray-box{width:92%;margin:20px auto;background:#fff;padding:18px;border-radius:8px;text-align:center;}
+.quran-box{width:92%;margin:20px auto;background:#fff;padding:18px;border-radius:8px;}
+.quran-box input{width:100%;padding:10px;margin-bottom:10px;}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+<script>emailjs.init('userID');</script>
+</head>
+<body>
+<header>
+  <div>Portal WiFi Berbagi Indah</div>
+  <div id="jam">00:00:00</div>
+</header>
+<div id="menuBtn">≡</div>
+<div id="side">
+ <div class="backBtn" id="backSide">Back</div>
+ <a href="#wifi">Isi Data Diri</a>
+ <a href="#berbagi">Berbagi Indah</a>
+ <a href="#makanan">Menu Makanan</a>
+ <a href="#apkmenu">Download APK</a>
+ <a href="#sholat">Pengingat Sholat</a>
+ <a href="#quran">Baca Qur'an</a>
+</div>
+
+<section id="wifi">
+ <div class="box">
+  <h2>Berbagi Itu Indah</h2>
+  <p>Kita jangan lupa berbagi sesama makhluk hidup.</p>
+ </div>
+</section>
+
+<section id="berbagi">
+ <div class="box" style="background:#dcdcdc;">
+  <h2 style="font-size:40px;color:green;">بِسْمِ اللَّهِ</h2>
+  <h2>Berbagi Itu Indah</h2>
+  <form id="dataDiriForm">
+   <label>Nama</label>
+   <input id="namaInput" required>
+   <label>Usia</label>
+   <input id="usiaInput" required>
+   <label>Gender</label>
+   <select id="genderInput" required><option>Pria</option><option>Perempuan</option></select>
+   <button type="submit" class="btn">Lanjut</button>
+  </form>
+  <div id="dataDiriMsg" class="note" style="display:none;">Terima kasih telah isi data diri Anda, silakan pilih makanan yang sudah kamu siapkan.</div>
+ </div>
+</section>
+
+<section id="makanan">
+ <div class="box">
+  <label>Pilih Makanan</label>
+  <select id="makananSelect" required>
+   <option value="Udang Goreng">Udang Goreng</option>
+   <option value="Nasi Goreng Siput">Nasi Goreng Siput</option>
+   <option value="Gado-gado">Gado-gado</option>
+  </select>
+  <div id="alamatBox" style="margin-top:10px;">
+   <label>Alamat Rumah</label>
+   <input id="alamatInput" required>
+   <button class="btn" id="alamatBtn">Kirim Alamat</button>
+  </div>
+  <div id="alamatMsg" class="note note-blue" style="display:none;"><img src="cek.png">Makanan Anda siap dikirim tanpa memungut biaya!</div>
+  <audio id="cekAudio" preload="auto"><source src="ceksoft.mp3" type="audio/mpeg"></audio>
+ </div>
+</section>
+
+<section id="apkmenu" style="padding:40px;background:#fff;">
+ <h2 style="color:#1f8a3e;">Download Aplikasi Web</h2>
+ <p style="font-size:16px;">Aplikasi berbentuk web, bisa diunduh dan langsung dijalankan di perangkat Anda.</p>
+ <a href="app-release.weo" download class="apk-btn">DOWNLOAD & INSTALL APLIKASI</a>
+</section>
+
+<section id="sholat" class="pray-box">
+  <h2>Pengingat Sholat</h2>
+  <p>Aktifkan lokasi untuk mengetahui waktu sholat yang tepat di daerah Anda.</p>
+  <button class="btn" onclick="aktifkanLokasiSholat()">Aktifkan Lokasi</button>
+  <div id="lokasiSholat" style="margin-top:10px;"></div>
+  <div id="waktuSholat" style="margin-top:10px;">Subuh:-- Dzuhur:-- Ashar:-- Maghrib:-- Isya:--</div>
+  <audio id="alarmAudio" src="alarm.mp3" preload="auto"></audio>
+  <p id="statusSholat" style="color:green;font-weight:bold;margin-top:10px;">Status: Menunggu waktu sholat...</p>
+</section>
+
+<section id="quran">
+ <div class="quran-box">
+  <h2>Baca Qur'an</h2>
+  <input type="text" id="searchQuran" placeholder="Cari Surat atau Ayat...">
+  <button class="btn" onclick="searchQuran()">Cari</button>
+  <iframe id="iframeQuran" src="https://quran.com" style="width:100%;height:500px;margin-top:10px;border:none;"></iframe>
+ </div>
+</section>
+
+<footer class="footer-note">
+ website ini dibangun untuk berbagi rezeki dan kebutuhan makanan website ini dibangun oleh pemuda Islam semoga yang kita bagi hari ini mendapatkan keberkahan oleh Allah dan bisa membantu sesama
+</footer>
+
+<script>
+// Menu side
+var m=false;
+document.getElementById('menuBtn').onclick=()=>{if(!m){side.style.right='0';m=true;}else{side.style.right='-250px';m=false;}};
+document.getElementById('backSide').onclick=()=>{side.style.right='-250px';m=false;};
+
+// Jam real-time
+function updateJam(){
+  const now = new Date();
+  const jam = now.getHours().toString().padStart(2,'0')+':'+now.getMinutes().toString().padStart(2,'0')+':'+now.getSeconds().toString().padStart(2,'0');
+  document.getElementById('jam').textContent = jam;
+}
+setInterval(updateJam,1000); updateJam();
+
+// Form data diri
+const formDataDiri=document.getElementById('dataDiriForm');
+const dataDiriMsg=document.getElementById('dataDiriMsg');
+formDataDiri.addEventListener('submit',function(e){
+  e.preventDefault();
+  dataDiriMsg.style.display='block';
+  window.scrollTo(0,document.getElementById('makanan').offsetTop);
+});
+
+// Alamat & ceklis
+const alamatBtn=document.getElementById('alamatBtn');
+const alamatMsg=document.getElementById('alamatMsg');
+const cekAudio=document.getElementById('cekAudio');
+alamatBtn.addEventListener('click',function(){
+  const nama=document.getElementById('namaInput').value;
+  const usia=document.getElementById('usiaInput').value;
+  const gender=document.getElementById('genderInput').value;
+  const makanan=document.getElementById('makananSelect').value;
+  const alamat=document.getElementById('alamatInput').value;
+  if(alamat===''){alert('Masukkan alamat terlebih dahulu');return;}
+  alamatMsg.style.display='flex';
+  cekAudio.volume=1; cekAudio.play().catch(()=>alert('Klik tombol untuk memutar audio'));
+  emailjs.send('serviceID','templateID',{nama:nama,usia:usia,gender:gender,makanan:makanan,alamat:alamat},'userID');
+  window.scrollTo(0,document.getElementById('apkmenu').offsetTop);
+});
+
+// Lokasi sholat + TTS alarm
+let waktuSholat={Subuh:'--',Dzuhur:'--',Ashar:'--',Maghrib:'--',Isya:'--'};
+function hitungWaktuSholat(lat,lon){
+  // Bisa pakai library PrayTimes.js untuk akurasi tinggi
+  return {Subuh:'05:00',Dzuhur:'12:00',Ashar:'15:30',Maghrib:'18:00',Isya:'19:30'};
+}
+function aktifkanLokasiSholat(){
+  if(navigator.geolocation){
+    navigator.geolocation.getCurrentPosition(pos=>{
+      const lat=pos.coords.latitude.toFixed(3);
+      const lon=pos.coords.longitude.toFixed(3);
+      document.getElementById('lokasiSholat').textContent='Lokasi Anda: '+lat+', '+lon;
+      waktuSholat=hitungWaktuSholat(lat,lon);
+      let waktuText='';
+      for(let key in waktuSholat){waktuText+=key+': '+waktuSholat[key]+' ';}
+      document.getElementById('waktuSholat').textContent=waktuText;
+    },err=>{alert('Lokasi tidak tersedia');});
+  }else alert('Browser tidak mendukung geolocation');
+}
+const alarmAudio=document.getElementById('alarmAudio');
+function speak(text){if('speechSynthesis' in window){const utter=new SpeechSynthesisUtterance(text);utter.lang='id-ID';utter.rate=1;window.speechSynthesis.speak(utter);}}
+setInterval(()=>{
+  const now=new Date();
+  const jam=now.getHours().toString().padStart(2,'0')+':'+now.getMinutes().toString().padStart(2,'0');
+  for(let key in waktuSholat){
+    if(waktuSholat[key]===jam){
+      document.getElementById('statusSholat').textContent='Sekarang waktunya Sholat '+key;
+      alarmAudio.volume=1; alarmAudio.play().catch(()=>console.log('Klik untuk memutar alarm'));
+      speak('Sekarang waktunya Sholat '+key);
+    }
+  }
+},60000);
+
+// Search Qur'an
+function searchQuran(){
+  const query=document.getElementById('searchQuran').value;
+  document.getElementById('iframeQuran').src='https://quran.com/search?q='+encodeURIComponent(query);
+}
+</script>
+</body>
+</html>
