@@ -118,18 +118,20 @@ h2{color:#1f8a3e;text-align:center;}
  </div>
 </section>
 
-  <!-- HALAMAN : KISAH PARA NABI -->
+ <!-- HALAMAN : KISAH PARA NABI -->
 <section id="cerita" class="box">
 <h2 style="color:#0d803d;text-align:center;">Cerita Para Nabi</h2>
-</section>
-  <script>
-const cerita=
- Adam:"Nabi Adam adalah manusia pertama di bumi...",
- Nuh:"Nabi Nuh membuat kapal besar dan selamat dari banjir besar...",
- Ibrahim:"Nabi Ibrahim diuji oleh Allah berkali-kali...",
- Musa:"Nabi Musa membelah laut merah...",
- Isa:"Nabi Isa punya banyak mukjizat...",
- Muhammad:"Nabi Muhammad nabi terakhir pembawa Al-Qur'an..."
+
+<select id="pilihNabi" class="btn">
+ <option value="">Pilih Nabi</option>
+ <option value="Adam">Nabi Adam AS</option>
+ <option value="Nuh">Nabi Nuh AS</option>
+ <option value="Ibrahim">Nabi Ibrahim AS</option>
+ <option value="Musa">Nabi Musa AS</option>
+ <option value="Isa">Nabi Isa AS</option>
+ <option value="Muhammad">Nabi Muhammad SAW</option>
+</select>
+
 <div id="ceritaBox" style="margin-top:12px;min-height:120px;"></div>
 </section>
 
@@ -162,31 +164,26 @@ const cerita=
 <br><i>Allahumma zid hadzal baita tasyrifan</i>
 </p>
 
+  <p><b>Doa masuk ke kota mekah:</b><br>
+    اللَّهُمَّ هٰذِهِ بَلْدَتُكَ وَأَنَا عَبْدُكَ، جِئْتُكَ سَائِلًا رَحْمَتَكَ
+<br><i>Allahumma hadzih baldatuka wa ana ‘abduka, ji’tuka sa’ilan rahmatak.</i>
+  </p>
+
+  <p><b>Doa saat masuk mesjidil Haram:</b><br>
+          اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ
+<br><i>“Allahummaftah li abwaba rahmatik.”</i>
+  </p>
+
+  <p><b>Doa saat selesai ibadah umrah:</b><br>
+          رَبَّنَا تَقَبَّلْ مِنَّا إِنَّكَ أَنْتَ السَّمِيعُ الْعَلِيمُ
+<br><i>“Rabbana taqabbal minna innaka Antas-Sami’ul-‘Alim.”</i>
+  </p>
+  
 </section>
 
 <script>
 const cerita={
- Adam:"<p>Pada masa ketika bumi masih sunyi, sebelum ada manusia yang berjalan di atas tanah dan sebelum ada suara manusia yang memuji Allah, berkehendaklah Allah untuk menciptakan makhluk baru yang akan diberi amanah besar. Allah ingin menciptakan manusia sebagai khalifah di bumi, makhluk yang diberi akal, rasa, dan kemampuan memilih antara kebaikan dan keburukan.</p>
-
-<p>Para malaikat yang menyaksikan perintah ini bertanya bukan karena menolak, tetapi karena ingin memahami hikmahnya. Mereka berkata bahwa makhluk sebelumnya ada yang membuat kerusakan dan menumpahkan darah. Namun Allah mengetahui apa yang tidak mereka ketahui.</p>
-
-<p>Allah kemudian menciptakan Adam dari tanah yang dikumpulkan dari berbagai penjuru bumi, lalu tanah itu diolah menjadi tanah liat, menjadi lumpur hitam, kemudian dibentuk dengan bentuk yang sempurna. Setelah itu Allah meniupkan ruh ke dalam tubuh Adam, sehingga ia hidup, bernapas, melihat, mendengar, dan berbicara.</p>
-
-<p>Allah mengajarkan kepada Adam nama-nama segala sesuatu, benda-benda, makhluk, benda langit, benda bumi, dan rahasia yang tidak diketahui oleh makhluk lain. Karena ilmu itulah Adam menjadi mulia. Lalu Allah memerintahkan kepada para malaikat untuk bersujud sebagai penghormatan, dan semua malaikat bersujud kecuali iblis.</p>
-
-<p>Iblis menolak karena sombong, ia merasa dirinya lebih mulia karena diciptakan dari api, sementara Adam dari tanah. Maka iblis dilaknati dan diusir dari surga. Namun ia meminta kesempatan untuk menggoda manusia sampai hari kiamat.</p>
-
-<p>Adam kemudian ditempatkan di surga, lalu Allah menciptakan Hawa sebagai pendampingnya. Mereka hidup bahagia tanpa kekurangan apapun. Allah hanya melarang mendekati satu pohon tertentu.</p>
-
-<p>Namun iblis berhasil membisikkan tipu daya. Adam dan Hawa akhirnya mendekati pohon itu dan memakannya. Setelah itu mereka sadar dan menyesal.</p>
-
-<p>Lalu Allah menurunkan Adam dan Hawa ke bumi. Mereka terpisah lama, menangis, memohon ampun. Sampai akhirnya Allah pertemukan mereka kembali di Jabal Rahmah.</p>
-
-<p>Adam memohon ampun kepada Allah dengan penuh penyesalan. Hingga Allah menerima taubatnya dan menjadikannya nabi pertama di bumi.</p>
-
-<p>Adam hidup di bumi mengajarkan keturunannya tentang iman, ibadah, dan kebaikan. Dari keturunannya lah manusia memenuhi seluruh bumi.</p>
-
-<p>Pada akhirnya, ketika ajal tiba, malaikat datang menjemput ruh Adam. Ia wafat sebagai nabi pertama di bumi, dan dari kisahnya dunia mengetahui tentang rahmat, ujian, dan ampunan Allah.</p>...",
+ Adam:"Nabi Adam adalah manusia pertama di bumi yang di ciptakan oleh Allah...",
  Nuh:"Nabi Nuh membuat kapal besar dan selamat dari banjir besar...",
  Ibrahim:"Nabi Ibrahim diuji oleh Allah berkali-kali...",
  Musa:"Nabi Musa membelah laut merah...",
